@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/yourusername/primary-repo.git'
+    repoURL: 'https://github.com/bramlak/origoss-task.git'
     targetRevision: HEAD
     path: kubernetes  
   destination:
