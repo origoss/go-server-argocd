@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/bramlak/origoss-task.git'
+    repoURL: 'https://github.com/origoss/go-server-argocd.git'
     targetRevision: HEAD
     path: monitoring/grafana
     helm:
