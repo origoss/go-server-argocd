@@ -4,11 +4,11 @@ metadata:
   name: root-app
   namespace: argocd
 spec:
-  project: default
+  project: devops
   source:
     repoURL: 'https://github.com/origoss/go-server-argocd.git'
     targetRevision: 'HEAD'
-    path: .
+    path: apps
     directory:
       recurse: true
   destination:
