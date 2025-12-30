@@ -2,19 +2,21 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: prometheus
-  namespace: argocd
+  namespace: monitoring
 spec:
   project: default
-  source:
-    repoURL: 'https://github.com/origoss/go-server-argocd.git'
-    path: monitoring/prometheus
-    targetRevision: HEAD
-    helm:
-      releaseName: prometheus
-      chart: prometheus 
-      repoURL: https://prometheus-community.github.io/helm-charts
-      valueFiles:
-        - values.yaml
+  sources:
+    - repoURL: https://prometheus-community.github.io/helm-charts
+      chart: prometheus
+      targetRevision: 27.52.0
+      helm:
+        releaseName: prometheus
+        valueFiles:
+          - $values/monitoring/prometheus/values.yaml
+    - repoURL: 'https://github.com/origoss/go-server-argocd.git'
+      targetRevision: HEAD
+      ref: values
+
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring

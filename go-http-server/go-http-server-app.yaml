@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: go-http-server
-  namespace: argocd
+  namespace: webserver
 spec:
   project: default
   source:
