@@ -11,4 +11,4 @@ extraScrapeConfigs: |
     metrics_path: /metrics
     static_configs:
       - targets:
-          - origoss-task-service.webserver.svc.cluster.local:8080
+          - origoss-task-service.webserver.svc.cluster.local:80
