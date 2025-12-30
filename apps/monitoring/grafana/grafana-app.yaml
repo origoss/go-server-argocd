@@ -12,7 +12,7 @@ spec:
       helm:
         releaseName: grafana
         valueFiles:
-          - $values/monitoring/grafana/values.yaml
+          - $values/apps/monitoring/grafana/values.yaml
     - repoURL: 'https://github.com/origoss/go-server-argocd.git'
       targetRevision: HEAD
       ref: values

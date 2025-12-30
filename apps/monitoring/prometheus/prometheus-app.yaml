@@ -12,7 +12,7 @@ spec:
       helm:
         releaseName: prometheus
         valueFiles:
-          - $values/monitoring/prometheus/values.yaml
+          - $values/apps/monitoring/prometheus/values.yaml
     - repoURL: 'https://github.com/origoss/go-server-argocd.git'
       targetRevision: HEAD
       ref: values
