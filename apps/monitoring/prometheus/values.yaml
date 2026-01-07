@@ -15,3 +15,8 @@ extraScrapeConfigs: |
         target_label: __address__
         regex: ([^:]+)(?::\d+)?;(\d+)
         replacement: $1:$2
+serviceAccounts:
+  server:
+    create: false
+    name: "prometheus"
+    annotations: {}
