@@ -1,14 +1,14 @@
 extraScrapeConfigs: |
   - job_name: 'custom-kubernetes-services'
-  kubernetes_sd_configs:
-  - role: service
-    namespaces:
-      own_namespace: false
-      names:
-      - webserver
-      - monitoring
-    selectors:
-    - label: "prometheus=main"
+    kubernetes_sd_config:
+    - role: service
+      namespaces:
+        own_namespace: false
+        names:
+        - webserver
+        - monitoring
+      selectors:
+      - label: "prometheus=main"
 serviceAccounts:
   server:
     create: false
