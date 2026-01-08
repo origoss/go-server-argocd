@@ -6,3 +6,13 @@ configs:
     application.resourceTrackingMethod: annotation
   params:
     application.namespaces: '*'
+repoServer:
+  metrics:
+    service:
+      labels:
+        prometheus: main
+server:
+  metrics:
+    service:
+      labels:
+        prometheus: main
