@@ -8,7 +8,8 @@ extraScrapeConfigs: |
         - webserver
         - monitoring
       selectors:
-      - label: "prometheus=main"
+      - role: service
+        label: "prometheus=main"
 serviceAccounts:
   server:
     create: false
