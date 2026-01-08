@@ -6,4 +6,4 @@ persistence:
   size: 10Gi
 service:
   labels:
-    prometheus: main
+    prometheus: "main"
