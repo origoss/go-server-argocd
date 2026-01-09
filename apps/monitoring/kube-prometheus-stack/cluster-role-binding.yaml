@@ -1,12 +1,12 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: prometheus-discoverer
+  name: kube-prometheus-stack-discoverer
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: discoverer
 subjects:
 - kind: ServiceAccount
-  name: prometheus
+  name: kube-prometheus-stack
   namespace: monitoring

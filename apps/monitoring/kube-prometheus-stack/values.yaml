@@ -15,7 +15,7 @@ prometheus:
           scheme: http
   serviceAccount:
     create: false
-    name: "prometheus"
+    name: "kube-prometheus-stack"
     annotations: {}
   serviceMonitor:
     selfMonitor: true
