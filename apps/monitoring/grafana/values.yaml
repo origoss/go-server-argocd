@@ -1,9 +1,0 @@
-# persistence:
-#   enabled: true
-#   type: pvc
-#   accessModes:
-#     - ReadWriteOnce
-#   size: 10Gi
-service:
-  labels:
-    prometheus: "main"
