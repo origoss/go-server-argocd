@@ -1,0 +1,24 @@
+prometheus:
+  additionalServiceMonitors:
+    - name: custom-kubernetes-services
+      selector:
+        matchLabels:
+          prometheus: main
+      namespaceSelector:
+        matchNames:
+          - webserver
+          - monitoring
+      endpoints:
+        - port: metrics
+          path: /metrics
+          interval: 30s
+          scheme: http
+  serviceAccount:
+    create: false
+    name: "prometheus"
+    annotations: {}
+  serviceMonitor:
+    selfMonitor: true
+grafana:
+  serviceMonitor:
+    enabled: true
